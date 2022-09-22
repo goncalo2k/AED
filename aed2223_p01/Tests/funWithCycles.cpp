@@ -8,7 +8,17 @@
 // ----------------------------------------------------------
 // TODO
 bool FunWithCycles::palindrome(const std::string & s) {
-    return false;
+    
+    string cpy = s;
+    for (int i = 0; i < cpy.size()/2; i++)
+    {
+        if(cpy[i] =! cpy[cpy.size() - i - 1])
+        {
+            return false;
+        }
+    }
+    
+    return true;
 }
 
 // ----------------------------------------------------------
